@@ -1,35 +1,90 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import reactLogo from '../src/assets/react.svg';
+import viteLogo from '../public/vite.svg';
+import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0)
+function logar() {
+  var matricula = document.getElementById('Matricula').value;
+  var senha = document.getElementById('Senha').value;
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+  if ((matricula === 'admin' || matricula === 'user') && senha === matricula) {
+    alert('Login bem-sucedido!');
+    window.location.href = "Vagas.html"; // Use window.location.href para redirecionar
+    localStorage.setItem('Matricula', matricula);
+  } else {
+    alert('Matrícula ou senha incorretos');
+  }
 }
 
-export default App
+function exibirLinkAdmin() {
+  const matricula = localStorage.getItem('Matricula');
+  if (matricula === 'admin') {
+    const linkAdmin = document.getElementById('linkAdmin');
+    if (linkAdmin) {
+      linkAdmin.classList.remove('hidden');
+    }
+  }
+}
+
+exibirLinkAdmin()
+
+function App() {
+  return (
+    <main id="container">
+
+      <form id="login_form">
+
+        <div id="form_header">
+
+          <h1>Login</h1>
+
+          <div id="inputs">
+
+            <div className="input-box">
+
+              <label htmlFor="Matricula">
+                Matrícula
+                <div className="input-field">
+
+                  <i className="fa-solid fa-user"></i>
+                  <input type="text" id="Matricula" name="Matricula" />
+
+                </div>
+
+              </label>
+
+            </div>
+
+          </div>
+
+          <div id="inputs">
+
+            <div className="input-box">
+
+              <label htmlFor="Senha">
+                Senha
+                <div className="input-field">
+
+                  <i className="fa-solid fa-key"></i>
+                  <input type="password" id="Senha" name="Senha" />
+                </div>
+
+              </label>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <button type="submit" id="login-button" onClick={() => logar()}>
+          Login
+        </button>
+
+      </form>
+
+    </main>
+  );
+}
+
+export default App;
