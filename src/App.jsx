@@ -3,13 +3,13 @@ import reactLogo from '../src/assets/react.svg';
 import viteLogo from '../public/vite.svg';
 import './App.css';
 
-function logar() {
+function logar() { // Login
   var matricula = document.getElementById('Matricula').value;
   var senha = document.getElementById('Senha').value;
 
   if ((matricula === 'admin' || matricula === 'user') && senha === matricula) {
     alert('Login bem-sucedido!');
-    window.location.href = "Vagas.html"; // Use window.location.href para redirecionar
+    window.location.href = "Vagas.html"; 
     localStorage.setItem('Matricula', matricula);
   } else {
     alert('Matrícula ou senha incorretos');
@@ -26,7 +26,10 @@ function exibirLinkAdmin() {
   }
 }
 
-exibirLinkAdmin()
+exibirLinkAdmin() // Fim login
+
+
+
 
 function App() {
   return (
