@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
-import reactLogo from '../src/assets/react.svg';
-import viteLogo from '../public/vite.svg';
 import './App.css';
 
-function logar() { // Login
+function logar() { // Inicio Login
   var matricula = document.getElementById('Matricula').value;
   var senha = document.getElementById('Senha').value;
 
@@ -27,7 +24,6 @@ function exibirLinkAdmin() {
 }
 
 exibirLinkAdmin() // Fim login
-
 
 
 
