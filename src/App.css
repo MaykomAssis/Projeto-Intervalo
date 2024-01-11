@@ -1,18 +1,19 @@
-
-@import url(https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400&display=swap%27%29%3B);
-
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
 
 :root {
-    --color-light-50: #f8fafc; 
+    --color-light-50: #f8fafc;
+    --color-dark-50: #797984;
+    --color-dark-100: #312d37;
+    --color-purple-50: #7c3aed;
+    --color-purple-100: #a855f7;
+    --color-purple-200: #bf46ef;
 }
 
 * {
-
-font-family: 'poppins' , sans-serif;
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 #container {
@@ -34,68 +35,72 @@ box-sizing: border-box;
     flex-direction: column;
     border-radius: 8px;
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336);
+    padding-top: 60px;
 }
 
 #form_header {
-
+    width: 80%;
+    height: 50vh;
     background-color: #f8fafc;
-    width: 30%;
-    height: 30vh;
 
     >h1 {
-      text-align: left;
-      font-size: 2.5em;
-      padding-top: 20px;
+        padding-bottom: 20px;
     }
 }
 
-.imput-box {
-    margin: 70px;
-    }
+#form_header > h1 {
+    text-align: left;
+    font-size: 2.5em;
+    padding-top: 20px;
+}
 
-.imput-box label {
+.input-box {
+    margin: 70px;
+}
+
+.input-box label {
     font-size: 17px;
     color: var(--color-dark-50);
 }
 
-.imput-field {
+.input-field {
     display: flex;
     align-items: center;
     gap: 20px;
     padding: 3px;
     cursor: text;
-    border-bottom: 1px solid var(--color-dark-900);
+    border-bottom: 1px solid var(--color-dark-100);
 }
 
-.imput-field i {
+.input-field i {
     font-size: 18px;
     margin: 8px;
-    color: var(--color-dark-900);
+    color: var(--color-dark-100);
 }
 
-.imput-field input {
+.input-field input {
     border: none;
     background-color: transparent;
     font-size: 15px;
     width: 300px;
     padding: 0px 5px;
 }
-.imput-field input:focus {
+
+.input-field input:focus {
     outline: none;
 }
 
-#login-botton {
+#login-button {
     border: none;
     width: 20%;
     height: 3vw;
-    background-color: #7c3aed;
+    background-color: var(--color-purple-50);
     color: white;
     margin-bottom: 50px;
     border-radius: 8px;
 }
 
-#login-botton:hover {
-
+#login-button:hover {
     background-color: var(--color-purple-100);
     border-radius: 8px;
     transition: 0.6s;

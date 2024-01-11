@@ -1,4 +1,8 @@
 import './App.css';
+import { FaUserAlt } from "react-icons/fa";
+import { FaKey } from "react-icons/fa";
+
+
 
 function logar() { // Inicio Login
   var matricula = document.getElementById('Matricula').value;
@@ -35,7 +39,7 @@ function App() {
 
         <div id="form_header">
 
-          <h1>Login</h1>
+        <h1>Login</h1>
 
           <div id="inputs">
 
@@ -45,7 +49,8 @@ function App() {
                 Matrícula
                 <div className="input-field">
 
-                  <i className="fa-solid fa-user"></i>
+                <FaUserAlt />
+                  
                   <input type="text" id="Matricula" name="Matricula" />
 
                 </div>
@@ -64,7 +69,8 @@ function App() {
                 Senha
                 <div className="input-field">
 
-                  <i className="fa-solid fa-key"></i>
+                <FaKey />
+
                   <input type="password" id="Senha" name="Senha" />
                 </div>
 
