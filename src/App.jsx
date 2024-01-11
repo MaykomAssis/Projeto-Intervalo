@@ -29,6 +29,9 @@ exibirLinkAdmin() // Fim login
 
 function App() {
   return (
+
+    <div className="app">
+
     <main id="container">
 
       <form id="login_form">
@@ -83,6 +86,8 @@ function App() {
       </form>
 
     </main>
+
+    </div>
   );
 }
 
