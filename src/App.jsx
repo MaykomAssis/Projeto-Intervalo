@@ -30,7 +30,7 @@ exibirLinkAdmin() // Fim login
 function App() {
   return (
 
-    <div className="app">
+    <div className="style.App">
 
     <main id="container">
 
