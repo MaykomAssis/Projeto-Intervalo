@@ -1,7 +1,7 @@
 import React from "react";
 import '../Styles/VagasEditar.css'
 
-const Vagas = () => {
+const VagasEditar = () => {
   return (
     
     <div className="contain-main">
@@ -38,4 +38,4 @@ const Vagas = () => {
     );
 };
 
-export default Vagas;
+export default VagasEditar;
