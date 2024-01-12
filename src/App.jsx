@@ -1,8 +1,15 @@
 import './App.css';
+import ReactDOM from 'react-dom';
+import AppRouter from './routes/AppRoutes';
 import { FaUserAlt } from "react-icons/fa";
 import { FaKey } from "react-icons/fa";
 
-
+ReactDOM.render(
+  <React.StrictMode>
+    <AppRouter />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
 function logar() { // Inicio Login
   var matricula = document.getElementById('Matricula').value;
