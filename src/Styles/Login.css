@@ -43,25 +43,24 @@
     width: 80%;
     height: 50vh;
     background-color: #f8fafc;
-
-    >h1 {
-        padding-bottom: 20px;
-    }
 }
 
-#form_header > h1 {
+ h1 {
     text-align: left;
     font-size: 2.5em;
     padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .input-box {
     margin: 70px;
+    height: 4vw;
 }
 
 .input-box label {
-    font-size: 17px;
+    font-size: 17px;;
     color: var(--color-dark-50);
+    margin-bottom: 10px;
 }
 
 .input-field {

@@ -29,7 +29,7 @@ exibirLinkAdmin() // Fim login
 
 
 
-function App() {
+function Login() {
   return (
 
     <body>
@@ -95,4 +95,4 @@ function App() {
   );
 }
 
-export default App;
+export default Login;
