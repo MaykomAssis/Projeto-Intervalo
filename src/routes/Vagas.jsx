@@ -1,5 +1,5 @@
 import React from "react";
-import '../Styles/Vagas.css'
+import '../Styles/Vagas.css';
 
 const Vagas = () => {
   return (
