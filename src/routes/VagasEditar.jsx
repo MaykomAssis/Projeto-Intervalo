@@ -29,7 +29,9 @@ const VagasEditar = () => {
 
         <button id="liberar" onclick="">
             Liberar Vaga 
-        </button>
+        </button> 
+
+
     </div>
 
     <button id="linkAdmin"  class="hidden" onclick="alterar()"> <i class="fa-solid fa-sliders"></i> Ajustar Limite De Vagas</button>
