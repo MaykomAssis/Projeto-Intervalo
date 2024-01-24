@@ -9,6 +9,7 @@ function logar() { // Inicio Login
   if ((matricula === 'admin' || matricula === 'user') && senha === matricula) {
     alert('Login bem-sucedido!');
     window.location.href = "Vagas.jsx"; 
+
     localStorage.setItem('Matricula', matricula);
   } else {
     alert('Matrícula ou senha incorretos');
@@ -22,17 +23,14 @@ function exibirLinkAdmin() {
     if (linkAdmin) {
       linkAdmin.classList.remove('hidden');
     }
-  }
-}
+};
+
+};
 
 exibirLinkAdmin() // Fim login
 
-
-
 function Login() {
   return (
-
-    <body>
     
     <main id="container">
 
@@ -89,10 +87,8 @@ function Login() {
 
       </form>
 
-    </main>
-
-    </body>
+      </main>
   );
-}
+};
 
 export default Login;
